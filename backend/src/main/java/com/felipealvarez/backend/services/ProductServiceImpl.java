@@ -1,6 +1,5 @@
 package com.felipealvarez.backend.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,11 +64,7 @@ public class ProductServiceImpl implements ProductService{
       throw new Exception("Franchise ID cannot be null");
     }
 
-    List<Product> products = new ArrayList<>();
-
-    return products;
-
-    //return productRepository.findTopProductByStock_FranchiseId(franchiseId);
+    return productRepository.getTopProductsByStockForFranchise(franchiseId);
   }
 
   public void delete(Product entity) throws Exception{
@@ -90,7 +85,4 @@ public class ProductServiceImpl implements ProductService{
     productRepository.deleteById(entity.getId());
     log.info("delete Product successful");
   }
-
-  
-  
 }
