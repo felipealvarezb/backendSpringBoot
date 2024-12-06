@@ -10,7 +10,7 @@ El **Franchise Management System** es una aplicación de gestión de franquicias
 
 Antes de desplegar la aplicación, asegúrate de tener instalado lo siguiente en tu sistema:
 
-1. **Java Development Kit (JDK) 17 o superior**  
+1. **Java Development Kit (JDK) 21 o superior**  
    [Descargar JDK](https://adoptium.net/)
 
 2. **Maven** (para compilar y ejecutar el proyecto)  
