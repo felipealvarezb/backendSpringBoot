@@ -34,10 +34,35 @@ cd backend
 ```
 ### 2. Crear y ejecutar el contenedor de PostgreSQL
 Descargar e iniciar un contenedor de PostgreSQL en el puerto 5432.
-**Credenciales por defecto: Usuario: admin - Contraseña: admin
+
+Credenciales por defecto: Usuario: admin - Contraseña: admin
 
 ```bash
 docker-compose up -d
+docker ps 
 ```
+### 3. Compilar el proyecto
+
+Para compilar el proyecto, ejecuta:
+
+```bash
+./mvnw clean install
+./mvnw spring-boot:run
+```
+
+## 4. Endpoints disponibles
+
+La aplicación expone alguno de los siguientes endpoints principales:
+
+### **Franchise**
+#### Crear una franquicia
+- **Método:** `POST`
+- **URL:** `/api/v1/franchise`
+- **Body (JSON):**
+  ```json
+  {
+    "name": "Subway"
+  }
+
 
 
