@@ -34,6 +34,8 @@ cd backend
 ```
 ### 2. Crear y ejecutar el contenedor de PostgreSQL
 Descargar e iniciar un contenedor de PostgreSQL en el puerto 5432.
+**Credenciales por defecto: Usuario: admin - Contraseña: admin
+
 ```bash
 docker-compose up -d
 ```
