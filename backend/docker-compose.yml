@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:latest
+    container_name: postgres-db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: franchiseDB
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  spring-backend:
+    build:
+      context: . 
+    container_name: spring-backend
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/franchiseDB
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
+
+volumes:
+  postgres-data:
