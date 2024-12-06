@@ -28,11 +28,14 @@ Antes de desplegar la aplicación, asegúrate de tener instalado lo siguiente en
 ### 1. Clonar el repositorio
 Clona este repositorio en tu máquina local:
 
-`bash
+```bash
 git clone https://github.com/felipealvarezb/backendSpringBoot.git
 cd backend
-
+```
 ### 2. Crear y ejecutar el contenedor de PostgreSQL
 Descargar e iniciar un contenedor de PostgreSQL en el puerto 5432.
+```bash
 docker-compose up -d
+```
+
 
