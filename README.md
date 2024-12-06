@@ -1,4 +1,3 @@
-# backendSpringBoot
 # Franchise Management System
 
 ## Descripción
