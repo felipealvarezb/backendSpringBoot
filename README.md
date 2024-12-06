@@ -57,12 +57,92 @@ La aplicación expone alguno de los siguientes endpoints principales:
 ### **Franchise**
 #### Crear una franquicia
 - **Método:** `POST`
-- **URL:** `/api/v1/franchise`
+- **URL:** `http://localhost:8080/api/v1/franchise`
 - **Body (JSON):**
   ```json
   {
     "name": "Subway"
   }
+  ```
+
+### **Franchise**
+#### Actualiza una franquicia
+- **Método:** `PUT`
+- **URL:** `http://localhost:8080/api/v1/franchise`
+- **Body (JSON):**
+  ```json
+  {
+    "id": 4
+    "name": "Subway"
+  }
+  ```
+
+  ### **Branch**
+#### Crear una sucursal
+- **Método:** `POST`
+- **URL:** `http://localhost:8080/api/v1/branch`
+- **Body (JSON):**
+  ```json
+   {
+    "name": "Medellin",
+    "franchiseId": 4,
+   }
+  ```
+
+### **Branch**
+#### Actualiza una sucursal 
+- **Método:** `PUT`
+- **URL:** `http://localhost:8080/api/v1/branch`
+- **Body (JSON):**
+  ```json
+  {
+    "id": 1,
+    "name": "Bogota",
+  }
+  ```
+
+### **Product**
+#### Crear una Producto
+- **Método:** `POST`
+- **URL:** `http://localhost:8080/api/v1/product`
+- **Body (JSON):**
+  ```json
+   {
+     "name": "italianisimo",
+     "stock": 200,
+     "branchId": 1
+   }
+  ```
+
+### **Product**
+#### Actualizar un Producto 
+- **Método:** `PUT`
+- **URL:** `http://localhost:8080/api/v1/product`
+- **Body (JSON):**
+  ```json
+  {
+    "id": 1,
+    "name": "italianoBMT",
+  }
+  ```
+
+### **Product**
+#### Encontrar el Producto que mas stock tiene
+- **Método:** `PUT`
+- **URL:** `http://localhost:8080/api/v1/product/top-products/{franchiseId}`
+- **Body (JSON):**
+  ```json
+  {
+    "id": 1,
+    "name": "italianoBMT",
+  }
+  ```
+
+
+
+
+
+  
 
 
 
